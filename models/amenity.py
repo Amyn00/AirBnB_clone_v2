@@ -1,12 +1,22 @@
 #!/usr/bin/python3
 """Class amenity that inherit from BaseModel"""
-from models.base_model import BaseModel
+import models
+from models.base_model import BaseModel, Base
+from os import getenv
+import sqlalchemy
+from sqlalchemy import Column, String
+from sqlalchemy.orm import relationship
 
 
 class Amenity(BaseModel):
-    """Class amenity.
+    """Representation of Amenity """
+    if getenv('HBNB_TYPE_STORAGE') == 'db':
+        __tablename__ = 'amenities'
+        name = Column(String(128),
+                      nullable=False)
+    else:
+        name = ""
 
-    Attributes:
-        name (str): The name of amenity
-    """
-    name = ""
+    def __init__(self, *args, **kwargs):
+        """initializes Amenity"""
+        super().__init__(*args, **kwargs)
