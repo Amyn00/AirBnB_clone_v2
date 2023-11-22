@@ -3,6 +3,7 @@
 import unittest
 import MySQLdb
 from models.user import User
+from models.state import State
 from models import storage
 from datetime import datetime
 import os
@@ -39,6 +40,23 @@ class TestDBStorage(unittest.TestCase):
         self.assertEqual(new_count[0][0], old_count[0][0] + 1)
         cur.close()
         db.close()
+
+        db = MySQLdb.connect(user=os.getenv('HBNB_MYSQL_USER'),
+                             host=os.getenv('HBNB_MYSQL_HOST'),
+                             passwd=os.getenv('HBNB_MYSQL_PWD'),
+                             port=3306,
+                             db=os.getenv('HBNB_MYSQL_DB'))
+        cur = db.cursor()
+        init_count = self.get_state_count()
+        new_state = State(**{'name': 'California'})
+        final_count = self.get_state_count()
+        self.assertEqual(final_count - init_count, 1)
+        cur.close()
+        db.close()
+    
+    def get_state_count(self):
+        self.cursor.execute("SELECT COUNT(*) FROM states")
+        return self.cursor.fetchone()[0]
 
     def test_new(self):
         """ New object is correctly added to database """
