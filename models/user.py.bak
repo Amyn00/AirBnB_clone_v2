@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" holds class User"""
+"""Class user that inherits from BaseModel"""
 import hashlib
 import models
 from models.base_model import BaseModel, Base
@@ -9,7 +9,14 @@ from sqlalchemy import Column, String
 
 
 class User(BaseModel, Base):
-    """Representation of a user """
+    """Class user.
+
+    Attributes:
+        email (str): The email user
+        password (str): The password user
+        first_name (str): The first_name of user
+        last_name (str): The last_name of user
+    """
     if getenv('HBNB_TYPE_STORAGE') == 'db':
         __tablename__ = 'users'
         email = Column(String(128),

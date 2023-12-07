@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" holds class Review"""
+"""Class review that inherit from BaseModel"""
 import models
 from models.base_model import BaseModel, Base
 from os import getenv
@@ -10,7 +10,13 @@ from sqlalchemy import ForeignKey
 
 
 class Review(BaseModel, Base):
-    """Representation of Review """
+    """Class review.
+
+    Attributes:
+        place_id (str): The id of place.
+        user_id (str): The id of user.
+        text (str): The text
+    """
     if getenv('HBNB_TYPE_STORAGE') == 'db':
         __tablename__ = 'reviews'
         text = Column(String(1024),

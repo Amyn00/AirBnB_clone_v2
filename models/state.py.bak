@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" holds class State"""
+"""Class state that inherit from BaseModel"""
 import models
 from models.base_model import BaseModel, Base
 from os import getenv
@@ -9,7 +9,11 @@ from sqlalchemy.orm import relationship
 
 
 class State(BaseModel, Base):
-    """Representation of state """
+    """Class state.
+
+    Attributes:
+        name (str): The name of state.
+    """
     if getenv('HBNB_TYPE_STORAGE') == 'db':
         __tablename__ = 'states'
         name = Column(String(128),
@@ -33,3 +37,4 @@ class State(BaseModel, Base):
                 if city.state_id == self.id:
                     list_city.append(city)
             return list_city
+

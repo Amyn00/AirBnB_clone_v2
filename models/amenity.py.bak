@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" holds class Amenity"""
+"""Class amenity that inherit from BaseModel"""
 import models
 from models.base_model import BaseModel, Base
 from os import getenv
