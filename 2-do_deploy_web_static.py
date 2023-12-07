@@ -6,7 +6,7 @@ from datetime import datetime
 from fabric.api import *
 import os
 
-env.hosts =["52.91.182.187", "54.237.207.18"]
+env.hosts = ["52.91.182.187", "54.237.207.18"]
 env.user = "ubuntu"
 
 
@@ -21,6 +21,7 @@ def do_pack():
         return archived_f_path
     else:
         return None
+
 
 def do_deploy(archive_path):
     """Distribute archive."""

@@ -9,7 +9,7 @@ from fabric.api import put
 from fabric.api import run
 import os
 
-env.hosts =["52.91.182.187", "54.237.207.18"]
+env.hosts = ["52.91.182.187", "54.237.207.18"]
 
 
 def do_pack():
@@ -28,6 +28,7 @@ def do_pack():
         if local("tar -cvzf {} web_static".format(file)).failed is True:
             return None
         return file
+
 
 def do_deploy(archive_path):
     """Distribute an archive.to the web server.
@@ -65,6 +66,7 @@ def do_deploy(archive_path):
            format(name)).failed is True:
         return False
     return True
+
 
 def deploy():
     """Create and distribute an archive to a web server."""
