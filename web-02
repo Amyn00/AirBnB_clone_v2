@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+eval $("ssh-agent")
+
+ssh-add ~/.ssh/hbnb
+
+ssh ubuntu@54.237.207.18
