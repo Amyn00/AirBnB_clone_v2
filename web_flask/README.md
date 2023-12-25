@@ -23,6 +23,8 @@
 
 #### Recommended YouTube playlist to get you started
 
+[![IMAGE ALT TEXT HERE](https://img.youtu.be/MwZwr5Tvyxo?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH/0.jpg)](https://youtu.be/MwZwr5Tvyxo?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
+
 ## Learning Objectives
 
 ### General
