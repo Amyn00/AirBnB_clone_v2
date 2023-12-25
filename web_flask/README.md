@@ -23,7 +23,7 @@
 
 #### Recommended YouTube playlist to get you started
 
-[![IMAGE ALT TEXT HERE](https://img.youtu.be/MwZwr5Tvyxo?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH/0.jpg)](https://youtu.be/MwZwr5Tvyxo?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/MwZwr5Tvyxo?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH/0.jpg)](https://youtube.com/MwZwr5Tvyxo?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
 
 ## Learning Objectives
 
@@ -83,7 +83,7 @@
 ```bash
 $ pip3 install Flask
 ```
-<img src="https://github.com/Amyn00/AirBnB_clone_v2/tree/main/web_flask/images/hbnb_step3.png">
+<img src="https://github.com/Amyn00/AirBnB_clone_v2/blob/main/web_flask/images/hbnb_step3.png">
 
 ## Manual QA Review
 
