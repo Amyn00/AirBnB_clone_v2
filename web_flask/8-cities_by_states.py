@@ -10,15 +10,15 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@app.route('/states_list')
-def states_list_route():
+@app.route('/cities_by_states')
+def cities_by_states__route():
     """
-    List states: display a HTML page: (inside the tag <BODY>)
+    Cities by states: display a HTML page: (inside the tag <BODY>)
     Returns:
-        html: Template that lists all states sort by name desc
+        html: Template that lists all cities by states sort by name desc
     """
     states = storage.all("State").values()
-    return render_template("7-states_list.html", states=states)
+    return render_template("8-cities_by_states.html", states=states)
 
 
 @app.teardown_appcontext
